@@ -24,9 +24,9 @@ public class Method {
     public static int calculateHighScorePosition(int pScore) {
         if (pScore >= 1000) {
             return 1;
-        } else if (pScore >= 500 && pScore <= 1000) {
+        } else if (pScore >= 500 ) {
             return 2;
-        } else if (pScore >= 100 && pScore <= 500) {
+        } else if (pScore >= 100 ) {
             return 3;
         } else {
             return 4;
