@@ -44,9 +44,7 @@ public class Car {
     public String getMake() {
         return make;
     }
-
-
-
+    
     public void  describeCar(){
         System.out.println(doors + "-Door " + color + " " + make + " " +
                 model + " " +
