@@ -11,13 +11,13 @@ public class Main {
        System.out.println("model = " + car.getModel());
        System.out.println("color = " + car.getColor());
 
-       Account akhileshAccount = new Account();
-       akhileshAccount.setNumber("12345");
-       akhileshAccount.setBalance(1000.00);
-       akhileshAccount.setCustomerName("Akhilesh yadav");
-       akhileshAccount.setCustomerEmail("akhileshyadav@gmail.com");
-       akhileshAccount.setCustomerPhone("8948228957");
+       Account akhileshAccount = new Account("12345", 1000.00, "Akhilesh", "akhilesh@gmail.com",
+               "8948228957");
+       System.out.println(akhileshAccount.getNumber());
+       System.out.println(akhileshAccount.getBalance());
+
        akhileshAccount.depositFunds(250);
        akhileshAccount.withdrawFunds(20);
+
     }
 }
