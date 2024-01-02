@@ -9,15 +9,32 @@ public class PersonalComputer extends Product {
         this.motherBoard = motherBoard;
     }
 
-    public ComputerCase getComputerCase() {
-        return computerCase;
+//    public ComputerCase getComputerCase() {
+//        return computerCase;
+//    }
+//
+//    public Monitor getMonitor() {
+//        return monitor;
+//    }
+//
+//    public MotherBoard getMotherBoard() {
+//        return motherBoard;
+//    }
+
+    private void drawLogo(){
+        monitor.drawPixelAt(10, 10, "gray");
+    }
+    public void powerUp(){
+        computerCase.pressPowerButton();
+        drawLogo();
     }
 
-    public Monitor getMonitor() {
-        return monitor;
-    }
-
-    public MotherBoard getMotherBoard() {
-        return motherBoard;
+    @Override
+    public String toString() {
+        return "PersonalComputer{" +
+                "computerCase=" + computerCase +
+                ", monitor=" + monitor +
+                ", motherBoard=" + motherBoard +
+                "} " + super.toString();
     }
 }

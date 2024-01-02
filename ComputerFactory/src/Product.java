@@ -14,13 +14,13 @@ public class Product {
 
 class Monitor extends Product {
     private int size;
-    private int resolution;
+    private String  resolution;
 
     public Monitor(String model, String manufacturer){
         super(model,manufacturer);
     }
 
-    public Monitor(String model, String manufacturer, int size, int resolution) {
+    public Monitor(String model, String manufacturer, int size, String  resolution) {
         super(model, manufacturer);
         this.size = size;
         this.resolution = resolution;
@@ -28,10 +28,17 @@ class Monitor extends Product {
 
     public void drawPixelAt(int x, int y, String color){
         System.out.println(String.format(
-                "Drawing pixel at %d,%d in color %s",x,y, color
+                "Drawing pixel at %d, %d in color %s",x,y, color
         ));
     }
 
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "size=" + size +
+                ", resolution='" + resolution + '\'' +
+                "} " + super.toString();
+    }
 }
 class MotherBoard extends Product {
     private int ramSlot;
@@ -52,6 +59,15 @@ class MotherBoard extends Product {
     public void loadProgram(String programName){
       System.out.println("Program " + programName + " is now loading..");
     }
+
+    @Override
+    public String toString() {
+        return "MotherBoard{" +
+                "ramSlot=" + ramSlot +
+                ", cardSlots=" + cardSlots +
+                ", bios='" + bios + '\'' +
+                "} " + super.toString();
+    }
 }
 
 class ComputerCase extends Product {
@@ -66,5 +82,12 @@ class ComputerCase extends Product {
     }
     public void pressPowerButton(){
        System.out.println("Power button pressed");
+    }
+
+    @Override
+    public String toString() {
+        return "ComputerCase{" +
+                "powerSupply='" + powerSupply + '\'' +
+                "} " + super.toString();
     }
 }
