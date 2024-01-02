@@ -13,11 +13,28 @@ public class Main {
 
        Account akhileshAccount = new Account("12345", 1000.00, "Akhilesh", "akhilesh@gmail.com",
                "8948228957");
+
        System.out.println(akhileshAccount.getNumber());
        System.out.println(akhileshAccount.getBalance());
 
        akhileshAccount.depositFunds(250);
        akhileshAccount.withdrawFunds(20);
+
+       Account rajAccount = new Account();
+
+       System.out.println("Account number = " + rajAccount.getNumber());
+       System.out.println("Balance = $" + rajAccount.getBalance());
+
+       rajAccount.depositFunds(250);
+       rajAccount.withdrawFunds(20);
+
+        Account retvikAccount = new Account("Retvik", "retvik@gmail.com", "9839429145");
+
+       System.out.println("Account number = " + retvikAccount.getNumber());
+       System.out.println("Balance = $" + retvikAccount.getBalance());
+
+       retvikAccount.depositFunds(250);
+       retvikAccount.withdrawFunds(20);
 
     }
 }
