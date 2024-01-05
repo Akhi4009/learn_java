@@ -23,6 +23,22 @@ public class Main1 {
         System.out.println(Arrays.toString(arr4));
         int[] arr5 = Arrays.copyOf(arr4,arr4.length-1);
         System.out.println(Arrays.toString(arr5));
+        int[] arr6 = Arrays.copyOf(arr4,10);
+        System.out.println(Arrays.toString(arr6));
+
+        String [] sArray = {"Akhi", "Raj", "Sakshi", "Priti","Retvik"};
+        Arrays.sort(sArray);
+        if(Arrays.binarySearch(sArray,"Raj") >= 0){
+            System.out.println("Found Raj in the list");
+        }
+
+        int[] s1 = {1, 2, 3, 4, 5};
+        int[] s2 = {1, 2, 3, 5, 4};
+        if(Arrays.equals(s1, s2)){
+            System.out.println("Both are equal");
+        }else {
+            System.out.println("Arrays are not equal");
+        }
 
 
     }
