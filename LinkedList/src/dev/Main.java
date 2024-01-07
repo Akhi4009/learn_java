@@ -13,9 +13,12 @@ public class Main {
         System.out.println(placesToVisit);
         addMoreElements(placesToVisit);
         System.out.println(placesToVisit);
+//
+//        removeElements(placesToVisit);
+//        System.out.println(placesToVisit);
 
-        removeElements(placesToVisit);
-        System.out.println(placesToVisit);
+        gettingElements(placesToVisit);
+        printItinerary(placesToVisit);
 
 
     }
@@ -54,5 +57,28 @@ public class Main {
         String sp1 = list.pop();
         System.out.println(sp1 + " was removed");
 
+    }
+
+    private static void gettingElements(LinkedList<String> list){
+       System.out.println("Retrieved Element = " + list.get(4));
+        System.out.println("Retrieved Element = " + list.getFirst());
+        System.out.println("Retrieved Element = " + list.getLast());
+
+        // Queue retrieval method
+        System.out.println("Element from element() = " + list.element());
+
+        // stack retrieval method
+        System.out.println("Element from element() = " + list.peekFirst());
+        System.out.println("Element from element() = " + list.peekLast());
+        System.out.println("Element from element() = " + list.peek());
+
+    }
+
+    public static  void printItinerary(LinkedList<String> list){
+        System.out.println("Trip starts at " + list.getFirst());
+        for( int i =1; i< list.size(); i++){
+            System.out.println("--> From: " + list.get(i-1) + " to " + list.get(i));
+        }
+        System.out.println("Trip ends with " + list.getLast());
     }
 }
