@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MinimumElement {
@@ -6,8 +7,11 @@ public class MinimumElement {
 //        System.out.println("Enter size of array: ");
 //        int size = scanner.nextInt();
         int[] arr = readIntegers();
-        int min = findMin(arr);
-       System.out.println("Minimum value in arr = " + min);
+//        int min = findMin(arr);
+//       System.out.println("Minimum value in arr = " + min);
+        System.out.println(Arrays.toString(arr));
+        int[] reverse = reverseArr(arr);
+        System.out.println(Arrays.toString(reverse));
     }
     public static int[] readIntegers1(int size){
         Scanner scanner = new Scanner(System.in);
@@ -38,5 +42,18 @@ public class MinimumElement {
             }
         }
         return min;
+    }
+    private static int[] reverseArr(int[] arr){
+        int start = 0;
+        int end = arr.length-1;
+        int temp;
+        while(start < end){
+            temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        return arr;
     }
 }
