@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MoreList {
     public static void main(String[] args) {
@@ -31,5 +30,20 @@ public class MoreList {
         System.out.println(groceries);
         groceries.removeAll(List.of("apples","eggs"));
         System.out.println(groceries);
+        groceries.retainAll(List.of("apples", "milk","papaya"));
+        System.out.println(groceries);
+        groceries.clear();
+        System.out.println(groceries);
+        System.out.println("isEmpty = " + groceries.isEmpty());
+        groceries.addAll(List.of("eggs","pickles","mustard"));
+        groceries.addAll(Arrays.asList("eggs", "pickles", "ham"));
+        System.out.println(groceries);
+        groceries.sort(Comparator.naturalOrder());
+        System.out.println(groceries);
+        groceries.sort(Comparator.reverseOrder());
+        System.out.println(groceries);
+        var groceryArray = groceries.toArray(new String[0]);
+        System.out.println("-".repeat(20));
+        System.out.println(Arrays.toString(groceryArray));
     }
 }
