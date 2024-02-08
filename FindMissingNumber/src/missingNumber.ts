@@ -6,6 +6,7 @@ function missingNumber(nums:number[]):number{
 }
 
 function findDuplicate(nums:number[]):number{
+    // @ts-ignore
     const seen = new Set<Number>();
     for (const num of nums){
         if(seen.has(num)){
