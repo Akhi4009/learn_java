@@ -16,8 +16,25 @@ function findDuplicate(nums:number[]):number{
     }
     return -1;
 }
-const  arr1:number[] = [1,2,3,4,4,5]
-console.log(findDuplicate(arr1));
 
-const arr = [1,2,3,4,5,7];
-console.log(missingNumber(arr));
+function rotateArray(nums:number[],k:number):number[]{
+    k= k % nums.length;
+    reverse(nums,0,nums.length-1);
+    reverse(nums,0,k-1);
+    reverse(nums,k,nums.length-1);
+    return nums;
+}
+function reverse(arr:number[], start:number, end:number):number[]{
+    while (start < end){
+        [arr[start],arr[end]] = [arr[end],arr[start]];
+        start++;
+        end--
+    }
+    return arr;
+}
+const  arr1:number[] = [1,2,3,4,4,5]
+// console.log(findDuplicate(arr1));
+//
+// const arr = [1,2,3,4,5,7];
+// console.log(missingNumber(arr));
+console.log(rotateArray(arr1,3));
