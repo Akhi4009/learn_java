@@ -59,10 +59,27 @@ function mergeSortedArrays(nums1,m,nums2,n){
     }
     return nums1;
 }
-const arr1 =[1,2,3,4,5,6,8,9];
-const arr2 = [1,3,5,7,9,10,12]
 
-console.log(mergeSortedArrays(arr1,8,arr2,7))
+
+function removeDuplicates(nums){
+    if(nums.length === 0) return 0;
+
+    let i = 0;
+    for (let j= 1; j < nums.length; j++){
+        if(nums[j] !== nums[i]){
+            i++;
+            nums[i] = nums[j];
+        }
+    }
+    return nums
+}
+const arr1 =[1,2,3,4,4,5,5,6,8,9];
+console.log(removeDuplicates(arr1))
+const newLength = removeDuplicates(arr1);
+// console.log("Modified array:",arr1.slice(0,newLength))
+const arr2 = [1,3,5,7,9,10,12]
+//
+// console.log(mergeSortedArrays(arr1,8,arr2,7))
 
 // // const array = [1,2,3,4,6,7];
 // // console.log(missingNumber(array));

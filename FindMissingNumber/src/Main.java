@@ -60,16 +60,29 @@ public class Main {
         return nums1;
     }
 
+    public static int removeDuplicates(int[] nums){
+        if(nums.length == 0) return 0;
+        int i =0;
+        for (int j =0; j<nums.length;j++){
+            if(nums[j] != nums[i]){
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i+1;
+    }
+
     public static void main(String[] args) {
 //    int[] arr = {1,2,3,3,4,5};
 //        System.out.println(findDuplicate(arr));
 
         int [] arr1 = {1,2,3,4,6,0,0,0,0,0};
-        int[] arr2 = {2,4,5,6,7};
-        mergeSortedArrays(arr1,5,arr2,5);
-        for (int num : arr1){
-            System.out.print(num+" ");
-        }
+        System.out.println(removeDuplicates(arr1));
+//        int[] arr2 = {2,4,5,6,7};
+//        mergeSortedArrays(arr1,5,arr2,5);
+//        for (int num : arr1){
+//            System.out.print(num+" ");
+//        }
         // 6, 4, 3, 2, 1
 //        System.out.println(findMissingNumber(arr1));
 //        rotateArray(arr1,5);

@@ -53,9 +53,23 @@ function mergeSortedArrays(
     return nums1;
 }
 
+function removeDuplicates(nums:number[]):number{
+    if(nums.length === 0) return 0;
+    let i =0;
+    for ( let j =1; j<nums.length;j++){
+        if(nums[i] !== nums[j]){
+            i++;
+            nums[i] = nums[j];
+        }
+    }
+    return i+1;
+}
+
 const  arr1:number[] = [1,2,3,4,4,5]
-const arr2:number[] = [2,3,5,6,7]
-console.log(mergeSortedArrays(arr1,6,arr2,5))
+
+console.log(removeDuplicates(arr1))
+// const arr2:number[] = [2,3,5,6,7]
+// console.log(mergeSortedArrays(arr1,6,arr2,5))
 // console.log(findDuplicate(arr1));
 //
 // const arr = [1,2,3,4,5,7];
